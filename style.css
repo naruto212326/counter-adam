@@ -19,7 +19,7 @@ body{
 }
 
 /*輸入框樣式*/
-#counter-title-input{
+.form-area input{
     display: block; /*展現block元素*/
     margin: 15px;
     padding: 10px;
@@ -27,15 +27,7 @@ body{
     margin-right: 0px;
     width: 300px;
 }
-#counter-date{
-    display: block; /*展現block元素*/
-    margin: 15px;
-    padding: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 300px;
-    height: 15px;
-}
+
 
 .form-area{
     font-size: 14px;
