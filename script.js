@@ -34,15 +34,7 @@ let today = new Date ().toISOString ().split ('T')[0];
 console.log (today);
 datePicker.setAttribute ('min', today);
 
-function fixDateTimeLocalBug() {
-  var elements = document.querySelectorAll('input[type="datetime-local"]');
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('change', function() {
-      var date = new Date(this.value + "Z"); // 添加 "Z" 以确保使用 UTC 时间
-      this.value = date.toISOString().substring(0, 16); // 使用 toISOString() 将日期转换为 ISO 8601 格式
-    });
-  }
-};
+
 
 
 //更新頁面上倒數顯示
@@ -132,6 +124,6 @@ completeBtn.addEventListener ('click', reset);
 
 //恢復上次保存的倒數計時狀態
 restoreCountdown ();
-fixDateTimeLocalBug();
+
 
 
