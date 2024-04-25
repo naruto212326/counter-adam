@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="form-area">
+        <form id="counter-form">
+            <div>
+                <label>倒數事項</label>
+                <input type="text" name="title" id="counter-title-input" placeholder="輸入事項">
+            </div>
+            <div>
+                <label>倒數日期</label>
+                <input type="date" id="date-picker" name="date-picker">
+            </div>
+            <button type="submit" id="counterSubmit">提交</button>
+        </form>
+    </div>
+    
+    <div class="counter" id="counter" hidden>
+        <h1 id="counter-title">Counter Title</h1>
+        <ul>
+            <li><span>3</span>DAYS</li>
+            <li><span>6</span>HOURS</li>
+            <li><span>12</span>MINUTES</li>
+            <li><span>24</span>SECONDS</li>
+        </ul>
+        <button type="reset" id="counter-reset">Reset</button>
+    </div>
+
+    <div class="complete" id="complete" hidden>
+        <h1 class="complete-title">Counter Completed!!</h1>
+        <h1 id="complete-info">Countdown finished on 27-07-2022</h1>
+        <button id="complete-button">新的倒數事項</button>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
