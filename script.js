@@ -42,7 +42,7 @@ function fixDateTimeLocalBug() {
       this.value = date.toISOString().substring(0, 16); // 使用 toISOString() 将日期转换为 ISO 8601 格式
     });
   }
-}
+};
 
 
 //更新頁面上倒數顯示
@@ -74,7 +74,7 @@ function updateDom () {
       counterEl.hidden = false;
     }
   }, 1000); //每秒更新一次
-}
+};
 
 //更新倒數標題和日期，並保存到本地存儲
 function updateCountdown (e) {
@@ -99,7 +99,7 @@ function updateCountdown (e) {
     console.log (countdownValue); //輸出倒數計時值到控制台
     updateDom (); //更新倒數顯示
   }
-}
+};
 
 function reset () {
   let confirmReset = confirm("你確定要重置嗎"); //reset詢問
@@ -112,7 +112,7 @@ function reset () {
   title = ''; //重置標題
   date = ''; //重置時間
   counterFormArea.hidden = false;} //顯示設定區域
-}
+};
 
 //恢復上次保存倒數計時狀態
 function restoreCountdown () {
@@ -124,7 +124,7 @@ function restoreCountdown () {
     countdownValue = new Date (date).getTime (); //設置時間
     updateDom ();
   }
-}
+};
 
 counterForm.addEventListener ('submit', updateCountdown);
 counterResetBtn.addEventListener ('click', reset);
