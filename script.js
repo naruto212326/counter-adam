@@ -34,6 +34,16 @@ let today = new Date ().toISOString ().split ('T')[0];
 console.log (today);
 datePicker.setAttribute ('min', today);
 
+function fixDateTimeLocalBug() {
+  var elements = document.querySelectorAll('input[type="datetime-local"]');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('change', function() {
+      var date = new Date(this.value + "Z");
+      this.value = date.toISOString().substring(0, 16);
+    });
+  }
+}
+
 //更新頁面上倒數顯示
 function updateDom () {
   countdownActive = setInterval (() => {
@@ -121,14 +131,6 @@ completeBtn.addEventListener ('click', reset);
 
 //恢復上次保存的倒數計時狀態
 restoreCountdown ();
+fixDateTimeLocalBug();
 
-function fixDateTimeLocalBug() {
-  var elements = document.querySelectorAll('input[type="datetime-local"]');
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('change', function() {
-      var date = new Date(this.value + "Z");
-      this.value = date.toISOString().substring(0, 16);
-    });
-  }
-}
 
