@@ -1,7 +1,5 @@
 
-input {
-  all: unset;
-}
+
 body{
     background-color: #4c4177;
     background-image: linear-gradient(315deg,#4c4177 0%,#2e5470 74%); /* 顏色漸層 */
