@@ -2,19 +2,14 @@
     margin: 0;
     padding: 0;
     border: 0;
-    list-style: none;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: normal;
-    line-height: 1.2;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-/* 重置表单元素的默认样式 */
-input, button, select, textarea {
-    font-size: inherit;
-    font-family: inherit;
+input {
+  all: unset;
 }
-
 body{
     background-color: #4c4177;
     background-image: linear-gradient(315deg,#4c4177 0%,#2e5470 74%); /* 顏色漸層 */
